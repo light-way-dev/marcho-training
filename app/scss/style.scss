@@ -4,6 +4,55 @@
 @import 'global';
 
 
+.header{
+	padding: 40px 0;
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.menu{
+	display: flex;
+	&__list-item +.menu__list-item{
+		margin-left: 35px;
+	}
+	&__list-link{
+		text-transform: uppercase;
+		color: $title;
+		font-size: 22px;
+		padding: 2px;
+		&:hover{
+			color: $accent;
+			border-bottom: 1px solid $accent;
+		}
+	}
+	&__list-item--active{
+		color: $accent;
+		border-bottom: 1px solid $accent;
+	}
+}
+.user-nav{
+	display: flex;
+	&__link{
+		position: relative;
+	}
+	&__link + .user-nav__link{
+		margin-left: 25px;
+	}
+	&__numb{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: $accent;
+		border-radius: 50%;
+		top: -9px;
+		right: -14px;
+		text-align: center;
+		font-size: 12px;
+		line-height: 20px;
+		color: #fff;
+	}
+}
 
 
 @import 'media';
